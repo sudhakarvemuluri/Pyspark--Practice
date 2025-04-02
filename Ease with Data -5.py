@@ -5,7 +5,7 @@ from pyspark.sql.functions import *
 
 spark = SparkSession.builder.appName("Spark Introduction").getOrCreate()
 
-# COMMAND ----------
+
 
 spark
 
@@ -59,3 +59,5 @@ emp_final.rdd.getNumPartitions()
 # COMMAND ----------
 
 emp_final.write.format("csv").mode("overwrite").save("/FileStore/tables/emp_salary>50000")
+
+
